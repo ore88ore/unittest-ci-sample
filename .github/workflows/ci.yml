@@ -23,7 +23,7 @@ jobs:
         uses: ziishaned/jest-reporter-action@v0.0.1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          test-command: "yarn test"
+          test-command: "yarn test --coverage"
 
       - name: Coverage upload
         uses: actions/upload-artifact@v2
