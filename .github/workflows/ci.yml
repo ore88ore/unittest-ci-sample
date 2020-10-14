@@ -20,6 +20,12 @@ jobs:
         run: yarn test
 
       - name: Coverage report
+        uses: ziishaned/jest-reporter-action@v0.0.1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          test-command: "yarn test"
+
+      - name: Coverage upload
         uses: actions/upload-artifact@v2
         with:
           name: coverage-report
